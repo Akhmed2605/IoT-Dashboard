@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mein IoT Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="dashboard__header">
+      <h1>IoT Dashboard</h1>
+      <p>Live-Überwachung der Sensordaten</p>
+    </header>
+
+    <section class="dashboard__chart">
+      <h2>Temperatur (°C)</h2>
+      <canvas id="temperatureChart" aria-label="Temperatur in Echtzeit" role="img"></canvas>
+    </section>
+
+    <section class="dashboard__stats">
+      <div class="stat-card">
+        <h3>Aktuelle Temperatur</h3>
+        <p id="temperatureValue">-- °C</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
