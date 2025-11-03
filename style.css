@@ -1,0 +1,113 @@
+:root {
+  --bg: #f9ecdf;
+  --panel: rgba(255, 244, 232, 0.95);
+  --accent: #e89c7d;
+  --text: #3e2a1f;
+  --muted: #7f6758;
+  --shadow: rgba(114, 80, 52, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #ffe7d1 0%, #f6d7be 45%, #f2c9ae 70%, var(--bg) 100%);
+}
+
+.dashboard {
+  width: min(960px, 100%);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.dashboard__header {
+  grid-column: 1 / -1;
+  background: var(--panel);
+  padding: 32px 36px;
+  border-radius: 26px;
+  box-shadow: 0 24px 48px -20px var(--shadow);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.dashboard__header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 36px);
+}
+
+.dashboard__header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.dashboard__chart,
+.dashboard__stats {
+  background: var(--panel);
+  padding: 28px 32px;
+  border-radius: 24px;
+  box-shadow: 0 20px 44px -20px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard__chart h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.stat-card {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  text-align: center;
+  padding: 24px 16px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(232, 156, 125, 0.35), rgba(247, 206, 177, 0.35));
+  border: 1px solid rgba(232, 156, 125, 0.45);
+  box-shadow: 0 18px 36px -24px var(--shadow);
+}
+
+.stat-card h3 {
+  margin: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: clamp(32px, 6vw, 44px);
+  font-weight: 700;
+  color: #bb5a37;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 16px;
+  }
+
+  .dashboard__header,
+  .dashboard__chart,
+  .dashboard__stats {
+    padding: 24px;
+  }
+}
