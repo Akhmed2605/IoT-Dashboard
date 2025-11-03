@@ -47,3 +47,6 @@ Ein kompaktes Demo-Projekt aus HTML/CSS/JS und Python (Flask), das zeigt, wie si
 - Das Projekt ist für den lokalen Einsatz und Demonstrationszwecke gedacht.
 - Für einen produktiven Einsatz empfiehlt sich ein WSGI-Server (z. B. Gunicorn, uWSGI) sowie eine sichere CORS-/HTTPS-Konfiguration.
 
+## 📸 Screenshot
+
+![IoT Dashboard Vorschau](IoT-Dashboard.png)
